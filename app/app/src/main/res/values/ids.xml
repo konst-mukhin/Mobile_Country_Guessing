@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="flagImage" type="id" />
+    <item name="option1" type="id" />
+    <item name="option2" type="id" />
+    <item name="option3" type="id" />
+    <item name="option4" type="id" />
+    <item name="optionButton1" type="id" />
+    <item name="optionButton2" type="id" />
+    <item name="optionButton3" type="id" />
+    <item name="optionButton4" type="id" />
+</resources>
