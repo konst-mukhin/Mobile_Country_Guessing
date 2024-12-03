@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private float initialY;
     private int initialWidth;
     private int initialHeight;
-    private Button option1, option2, option3, option4, restartButton;
+    private Button option1, option2, option3, option4, restartButton, listButton, capitalModeButton;
     private HashMap<String, String> countriesMap = new HashMap<>();
     private String correctAnswer;
     private Handler handler = new Handler();
@@ -56,8 +56,15 @@ public class MainActivity extends AppCompatActivity {
         option3 = findViewById(R.id.option3);
         option4 = findViewById(R.id.option4);
         restartButton = findViewById(R.id.restartButton);
+        listButton = findViewById(R.id.listButton);
+        capitalModeButton = findViewById(R.id.capitalsModeButton);
 
         loadCountries();
+
+        NativeLib nativeLib = new NativeLib();
+        String capital = nativeLib.getCountryCapital("France");
+        System.out.println("Capital: " + capital);
+
 
         flagImage.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -86,6 +93,22 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+
+        capitalModeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CapitalActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+
+
+        listButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
             }
         });
 

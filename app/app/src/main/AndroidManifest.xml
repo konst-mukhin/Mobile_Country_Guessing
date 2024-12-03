@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".SignInActivity"/>
         <activity android:name=".SignUpActivity"/>
+        <activity android:name=".ListActivity"/>
+        <activity android:name=".CapitalActivity"/>
         <activity android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
